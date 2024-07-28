@@ -30,9 +30,8 @@ import { TitleCards } from '../../components/TitleCards/TitleCards';
               More info
             </button>
           </div>
-          <TitleCards/>
+          <TitleCards />
         </div>
-        
       </div>
     </div>
   );

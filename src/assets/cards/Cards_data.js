@@ -21,7 +21,8 @@ const cards_data = [
     {
         image:card_img2,
         name:"Squid Game"
-    },
+    }
+    ,
     {
         image:card_img3,
         name:"Squid Challange"
@@ -33,7 +34,8 @@ const cards_data = [
     {
         image:card_img5,
         name:"The Ghost"
-    },
+    }
+    ,
     {
         image:card_img6,
         name:"Lucifer"
