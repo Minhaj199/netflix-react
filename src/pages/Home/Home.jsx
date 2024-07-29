@@ -12,7 +12,7 @@ import { TitleCards } from '../../components/TitleCards/TitleCards';
     <div className="home">
       <Navbar />
       <div className="hero">
-        <img src={hero_banner} alt="" className="banner_img" />
+        <img src={hero_banner} alt="" className="banner-img" />
         <div className="hero-caption">
           <img src={hero_title} alt="" className="caption-img" />
           <p>
@@ -30,9 +30,14 @@ import { TitleCards } from '../../components/TitleCards/TitleCards';
               More info
             </button>
           </div>
-          <TitleCards/>
+          <TitleCards />
         </div>
-        
+      </div>
+      <div className="more-cards">
+        <TitleCards title={"Blockbuster Movie"} />
+        <TitleCards title={"Only on Netflix"} />
+        <TitleCards title={"Upcoming"} />
+        <TitleCards title={"Top Pics for you"} />
       </div>
     </div>
   );

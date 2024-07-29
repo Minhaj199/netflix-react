@@ -4,7 +4,7 @@
 
 .banner-img{
     width: 100%;
-    height: 97vh;
+   
     mask-image: linear-gradient(to right, transparent,black 75%);
     -weblit-mask-image: linear-gradient(to right, transparent,black 75%);
 }
@@ -89,5 +89,8 @@
     }
     .nore-cards {
         padding-left: 4%;
+    }
+    .more-cards{
+        padding-left: 6%;
     }
 }
