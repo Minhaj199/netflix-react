@@ -1,10 +1,22 @@
 import React,{useState} from 'react'
 import './Login.css'
 import netflix_log from '../../assets/logo.png'
+import { login,signup } from '../../firebase'
 export const Login = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [signState,setSignState]=useState('Sign In')
 
+  const user_auth=async (event)=>{
+    event.preventDefault()
+    if(signState==='Sign In'){
+      await login(email,password)
+    }else{
+      signup(name,email,password)
+    }
 
+  }
 
 
   return (
@@ -14,14 +26,29 @@ export const Login = () => {
         <h1>{signState}</h1>
         <form>
           {signState === "Sign Up" ? (
-            <input type="text" placeholder="Your name" />
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name"
+            />
           ) : (
             <></>
           )}
 
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button>{signState}</button>
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            placeholder="Password"
+          />
+          <button onClick={user_auth} type='submit'>{signState}</button>
           <div className="form-helper">
             <div className="remember-me">
               <input type="checkbox" name="" id="" />
