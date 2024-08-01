@@ -9,6 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
  const App = () => {
+  
+
   const navigate=useNavigate()
     useEffect(()=>{
       onAuthStateChanged(auth,async(user)=>{
